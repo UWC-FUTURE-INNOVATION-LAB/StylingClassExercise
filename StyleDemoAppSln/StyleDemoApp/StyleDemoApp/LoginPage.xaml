@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyleDemoApp.LoginPage" Title="Login" BackgroundColor="Black">
+    <ContentPage.Resources>
+        <Style x:Key="boxviewStyle" TargetType="BoxView">
+            <Setter Property="BackgroundColor" Value="DarkSalmon"/>
+        </Style>
+        
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="The Boxview below is using a local ContentPage Style"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" Style="{StaticResource headingLabelStyle}" />
+            <BoxView Style="{StaticResource boxviewStyle}" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"  WidthRequest="100" HeightRequest="100"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

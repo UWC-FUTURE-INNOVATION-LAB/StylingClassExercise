@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StyleDemoApp.MainPage" Title="Home Page" BackgroundColor="Black">
+
+    <NavigationPage.TitleView>
+        <Image Source="swoosh.png" HeightRequest="50" Aspect="AspectFit"/>
+    </NavigationPage.TitleView>
+    
+    <StackLayout>
+        <Frame Margin="30" BackgroundColor="Blue" Padding="24" CornerRadius="20">
+            <Label Text="Xamarin Forms Styling Demo" HorizontalTextAlignment="Center" Style="{StaticResource headingLabelStyle}"/>
+        </Frame>
+        <Label Text="Example of Explicit style using 2 Style Classes" Padding="30,10,30,10" StyleClass="headingLabelClass,bodyLabelClass"/>
+       
+        
+        <Label Text="Using Implicit style applied to all labels in App"  Padding="30,0,30,0"/>
+     
+       
+        <Button x:Name="LoginButton" Text="(Go To Login) Explicit Styled Button" Clicked="LoginButton_Clicked" Style="{StaticResource buttonStyle}" VerticalOptions="EndAndExpand"/>
+
+    </StackLayout>
+
+</ContentPage>
